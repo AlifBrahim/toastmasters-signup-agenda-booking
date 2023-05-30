@@ -1,4 +1,4 @@
-// import {signIn, getCsrfToken, getProviders, useSession} from 'next-auth/react'
+import {signIn, getCsrfToken, getProviders, useSession} from 'next-auth/react'
 import Image from 'next/image'
 import styles from '../../styles/Signin.module.css'
 import * as React from 'react';
