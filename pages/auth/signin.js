@@ -37,7 +37,7 @@ const Signin = ({ providers }) => {
                         {providers &&
                             Object.values(providers).map(provider => (
                                 <div key={provider.name} style={{ marginBottom: 0 }}>
-                                    <button className={styles.signin} onClick={() => signIn(provider.id, { callbackUrl: 'https://practice-toastmasters.vercel.app'})} >
+                                    <button className={styles.signin} onClick={() => signIn(provider.id)} >
                                         Sign in with{' '} {provider.name}
                                     </button>
                                 </div>
