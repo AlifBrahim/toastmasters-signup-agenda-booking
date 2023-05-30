@@ -1,0 +1,37 @@
+{
+  "name": "toastmasters-agenda",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.18",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.2",
+    "@next-auth/typeorm-legacy-adapter": "^2.0.2",
+    "bootstrap": "^5.2.3",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "mysql2": "^2.3.3",
+    "next": "13.4.4",
+    "next-auth": "^4.22.1",
+    "nodemailer": "^6.9.2",
+    "postmark": "^3.0.18",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
+    "react-router-dom": "^6.11.2",
+    "typeorm": "^0.3.7"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
