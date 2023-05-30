@@ -1,9 +1,9 @@
-import {signIn, getCsrfToken, getProviders, useSession} from 'next-auth/react'
+// import {signIn, getCsrfToken, getProviders, useSession} from 'next-auth/react'
 import Image from 'next/image'
 import styles from '../../styles/Signin.module.css'
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import {useRouter} from "next/router";
+// import {useRouter} from "next/router";
 
 const Div = styled('div')(({ theme }) => ({
     ... theme.typography.button,
@@ -14,16 +14,16 @@ const Div = styled('div')(({ theme }) => ({
     padding: theme.spacing(1),
 }));
 const Signin = ({ providers }) => {
-    const { data: session, status } = useSession();
-    const router = useRouter();
+    // const { data: session, status } = useSession();
+    // const router = useRouter();
 
-    if (status === "loading") {
-        return <div>Loading...</div>;
-    }
-    if (session) {
-        router.push('/');
-        return null;
-    }
+    // if (status === "loading") {
+    //     return <div>Loading...</div>;
+    // }
+    // if (session) {
+    //     router.push('/');
+    //     return null;
+    // }
 
     return (
         <div style={{ overflow: 'hidden', position: 'relative' }}>
