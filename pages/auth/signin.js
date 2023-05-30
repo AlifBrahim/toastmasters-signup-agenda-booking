@@ -13,7 +13,7 @@ const Div = styled('div')(({ theme }) => ({
     fontSize: '1.1rem',
     padding: theme.spacing(1),
 }));
-const Signin = ({ csrfToken, providers }) => {
+const Signin = ({ providers }) => {
     const { data: session, status } = useSession();
     const router = useRouter();
 
@@ -37,7 +37,7 @@ const Signin = ({ csrfToken, providers }) => {
                         {providers &&
                             Object.values(providers).map(provider => (
                                 <div key={provider.name} style={{ marginBottom: 0 }}>
-                                    <button className={styles.signin} onClick={() => signIn(provider.id)} >
+                                    <button className={styles.signin} onClick={() => signIn(provider.id, { callbackUrl: 'https://practice-toastmasters.vercel.app'})} >
                                         Sign in with{' '} {provider.name}
                                     </button>
                                 </div>
@@ -46,7 +46,7 @@ const Signin = ({ csrfToken, providers }) => {
                 </div>
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src='/login_pattern.svg' alt='Pattern Background' layout='fill' className={styles.styledPattern} />
+            <img src='/login_pattern.svg' alt='Pattern Background' className={styles.styledPattern} />
         </div>
     )
 }
