@@ -10,6 +10,8 @@ import Head from 'next/head';
 import homeStyles from '../styles/Home.module.css';
 import { useSession, signOut } from 'next-auth/react';
 import Navbar from '../components/Nav';
+import Footer from '@/components/footer';
+
 
 const apiKey = process.env.MY_API_KEY;
 export const getStaticProps = async () => {
@@ -315,8 +317,9 @@ export default function BasicTable({dates}) {
                         </>
                     )}
                 </div>
-
             </div>
+            <br></br>
+            <Footer />
         </>
     );
 }
