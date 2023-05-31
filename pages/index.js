@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Head from 'next/head';
 import homeStyles from '../styles/Home.module.css';
-import { useSession, signOut } from 'next-auth/react';
+import { useSession} from 'next-auth/react';
 import Navbar from '../components/Nav';
 import Footer from '@/components/footer';
 
@@ -70,7 +70,6 @@ export async function updateMemberNames(selectedDate, selectedRole, setRows) {
     }
     // Update your component's state with the new rows
     setRows(newRows);
-    console.log("newRows" + newRows)
 }
 
 export default function BasicTable({dates}) {
@@ -98,7 +97,6 @@ export default function BasicTable({dates}) {
 
 
     const handleDateChange = (event) => {
-        console.log('Selected date:', event.target.value);
         setSelectedDate(event.target.value);
         setSelectedRole('');
         setBookedMember(null);
@@ -130,13 +128,8 @@ export default function BasicTable({dates}) {
     const handleBookClick = () => {
         setBookingMode(true);
         const rowIndex = rows.findIndex(row => row.role === selectedRole);
-        console.log("rowIndex" + rowIndex);
         // Check if rowIndex is not -1
-        if (rowIndex !== -1) {
-            console.log("rows[rowIndex].member" + rows[rowIndex].member);
-        } else {
-            console.log("Could not find a row with the chosen role.");
-        }
+
     };
 
 
