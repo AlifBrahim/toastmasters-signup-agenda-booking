@@ -4,7 +4,7 @@ import styles from '../../styles/Signin.module.css'
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import {useRouter} from "next/router";
-import Loader from "../../components/Loader";
+import Loader from '@/components/loader';
 
 const Div = styled('div')(({ theme }) => ({
     ... theme.typography.button,
