@@ -11,6 +11,7 @@ import homeStyles from '../styles/Home.module.css';
 import { useSession} from 'next-auth/react';
 import Navbar from '../components/Nav';
 import Footer from '@/components/footer';
+import Loader from '@/components/loader';
 
 
 const apiKey = process.env.MY_API_KEY;
@@ -85,7 +86,7 @@ export default function BasicTable({dates}) {
     }, [selectedDate, selectedRole]);
 
     if (status === "loading") {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
 
     if (!session) {

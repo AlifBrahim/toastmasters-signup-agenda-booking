@@ -4,6 +4,7 @@ import styles from '../../styles/Signin.module.css'
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import {useRouter} from "next/router";
+import Loader from "../../components/Loader";
 
 const Div = styled('div')(({ theme }) => ({
     ... theme.typography.button,
@@ -18,7 +19,7 @@ const Signin = ({ providers }) => {
     const router = useRouter();
 
     if (status === "loading") {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
     if (session) {
         router.push('/');
