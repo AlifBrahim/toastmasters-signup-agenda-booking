@@ -47,6 +47,7 @@ const Signin = ({ providers }) => {
                 </div>
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src='/login_pattern.svg' alt='Pattern Background' className={styles.styledPattern} />
         </div>
     )
 }

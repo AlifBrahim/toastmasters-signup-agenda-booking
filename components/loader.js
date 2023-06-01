@@ -15,7 +15,7 @@ function Loader() {
             <Spinner
                 color='#000000'
                 loading='true'
-                size='150'
+                size='150px'
                 aria-label="Loading Spinner"
                 data-testid="loader"
             />
