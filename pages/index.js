@@ -15,7 +15,7 @@ import Loader from '@/components/loader';
 
 
 const apiKey = process.env.MY_API_KEY;
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     var dateNow = new Date().toISOString();
     const url = `https://www.googleapis.com/calendar/v3/calendars/p75em956e3b5r49tdpivg9ag2c%40group.calendar.google.com/events?orderBy=startTime&singleEvents=true&timeMin=${dateNow}&key=${apiKey}`
     const res = await fetch(url);
@@ -242,7 +242,8 @@ export default function BasicTable({dates}) {
                         </option>
                     ))}
                 </select>
-
+                <br></br>
+                <br></br>
                 <TableContainer component={Paper} sx={{ margin: '0 auto' }}>
                     <Table aria-label="simple table">
                         <TableHead>
